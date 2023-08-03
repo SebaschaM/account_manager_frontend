@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.options {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.option {
+  margin: 0 10px;
+  padding: 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+.option::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: blue; /* Color del subrayado */
+  transition: width 0.2s ease-out;
+}
+
+.option:hover::before {
+  width: 100%;
+}
+
+.option.selected::before {
+  width: 100%;
+}
